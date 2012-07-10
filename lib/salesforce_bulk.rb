@@ -23,8 +23,8 @@ module SalesforceBulk
       self.do_operation('update', sobject, records, nil)
     end
     
-    def create(sobject, records)
-      self.do_operation('insert', sobject, records, nil)
+    def create(sobject, records, wait=false)
+      self.do_operation('insert', sobject, records, wait)
     end
 
     def delete(sobject, records)
